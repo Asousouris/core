@@ -1,21 +1,70 @@
-# Contributing to Home Assistant
+# Contributing to Otodata Propane Tank Monitor
 
-Everybody is invited and welcome to contribute to Home Assistant. There is a lot to do...if you are not a developer perhaps you would like to help with the documentation on [home-assistant.io](https://home-assistant.io/)? If you are a developer and have devices in your home which aren't working with Home Assistant yet, why not spend a couple of hours and help to integrate them?
+Thank you for your interest in contributing to this project! This document provides guidelines and instructions for contributing.
 
-The process is straight-forward.
+## How to Contribute
 
- - Read [How to get faster PR reviews](https://github.com/kubernetes/community/blob/master/contributors/guide/pull-requests.md#best-practices-for-faster-reviews) by Kubernetes (but skip step 0 and 1)
- - Fork the Home Assistant [git repository](https://github.com/home-assistant/core).
- - Write the code for your device, notification service, sensor, or IoT thing.
- - Ensure tests work.
- - Create a Pull Request against the [**dev**](https://github.com/home-assistant/core/tree/dev) branch of Home Assistant.
+### Reporting Bugs
 
-Still interested? Then you should take a peek at the [developer documentation](https://developers.home-assistant.io/) to get more details.
+If you find a bug, please create an issue on GitHub with:
+- A clear, descriptive title
+- Steps to reproduce the issue
+- Expected behavior
+- Actual behavior
+- Home Assistant version
+- Integration version
+- Relevant logs from Home Assistant
 
-## Feature suggestions
+### Suggesting Enhancements
 
-If you want to suggest a new feature for Home Assistant (e.g. new integrations), please [start a discussion](https://github.com/orgs/home-assistant/discussions) on GitHub.
+Enhancement suggestions are welcome! Please create an issue with:
+- A clear, descriptive title
+- Detailed description of the proposed feature
+- Why this feature would be useful
+- Example use cases
 
-## Issue Tracker
+### Pull Requests
 
-If you want to report an issue, please [create an issue](https://github.com/home-assistant/core/issues) on GitHub.
+1. Fork the repository
+2. Create a new branch for your feature (`git checkout -b feature/amazing-feature`)
+3. Make your changes
+4. Test your changes thoroughly
+5. Commit your changes (`git commit -m 'Add amazing feature'`)
+6. Push to the branch (`git push origin feature/amazing-feature`)
+7. Open a Pull Request
+
+### Code Style
+
+- Follow PEP 8 style guidelines for Python code
+- Use meaningful variable and function names
+- Add comments for complex logic
+- Keep functions focused and concise
+
+### Testing
+
+Before submitting a PR:
+1. Test your changes with Home Assistant
+2. Ensure the integration loads without errors
+3. Verify all sensors work correctly
+4. Check Home Assistant logs for any warnings or errors
+
+## Development Setup
+
+1. Clone the repository
+2. Create a symbolic link from your HA `custom_components` folder to the integration:
+   ```bash
+   ln -s /path/to/otodata-tank-monitor/custom_components/neevo /path/to/homeassistant/custom_components/neevo
+   ```
+3. Restart Home Assistant
+4. Configure the integration through the UI
+
+## Questions?
+
+Feel free to open an issue for questions or discussion!
+
+## Code of Conduct
+
+- Be respectful and considerate
+- Welcome newcomers
+- Be patient with questions
+- Focus on constructive feedback
